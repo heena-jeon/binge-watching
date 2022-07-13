@@ -70,7 +70,3 @@ function showWordCloud(data) {
         delay: 10
     });
 }
-
-function test() {
-    
-}
