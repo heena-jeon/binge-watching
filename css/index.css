@@ -176,7 +176,7 @@ button {
         to bottom,
         rgba(20, 20, 20, 0.25) 50%,
         rgba(20, 20, 20, 1) 100%
-    ), url(images/entertainments/2days_1night.jpg);
+    ), url(../images/entertainments/2days_1night.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -209,8 +209,4 @@ button {
 .modal-content {
     display: table-row;
     height: 100%;
-}
-
-.w10 {
-    color: white;
 }

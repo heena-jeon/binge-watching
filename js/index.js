@@ -53,16 +53,22 @@ function getComments() {
 }
 
 function customKeywordWeight(keywords) {
+    var result = [];
     keywords.forEach(element => {
-        element["weight"] = Math.floor(Math.random() * 11);
-        element["link"] = "https://www.naver.com";
-        element["handlers"] = {
-            click: function() {
-                alert("!!!");
-            }
+        if(element.type == "happy") {
+            var data = {
+                "text" : element.text,
+                "weight" : Math.floor(Math.random() * 11),
+                "handlers" : {
+                    click: function() {
+                        alert("!!!");
+                    }
+                }
+            };
+            result.push(data);
         }
     });
-    showWordCloud(keywords);
+    showWordCloud(result);
 }
 
 function showWordCloud(data) {

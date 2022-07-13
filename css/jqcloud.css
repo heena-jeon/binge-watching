@@ -6,7 +6,7 @@
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
 .jqcloud {
-    font: 10px "Noto Sans KR", sans-serif;
+    font: 16px "Noto Sans KR", sans-serif;
     line-height: normal;
     overflow: hidden;
     position: relative;
@@ -17,6 +17,7 @@
 
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 .jqcloud-word.w1 {
     color: var(--gray-color-100);
@@ -24,45 +25,44 @@
 }
 .jqcloud-word.w2 {
     color: var(--gray-color-200);
-    font-size: 150%;
+    font-size: 125%;
 }
 .jqcloud-word.w3 {
     color: var(--gray-color-300);
-    font-size: 200%;
+    font-size: 150%;
 }
 .jqcloud-word.w4 {
     color: var(--gray-color-400);
-    font-size: 250%;
+    font-size: 175%;
 }
 .jqcloud-word.w5 {
     color: var(--gray-color-500);
-    font-size: 300%;
+    font-size: 200%;
 }
 .jqcloud-word.w6 {
     color: var(--gray-color-600);
-    font-size: 350%;
+    font-size: 225%;
 }
 .jqcloud-word.w7 {
     color: var(--gray-color-700);
-    font-size: 400%;
+    font-size: 250%;
 }
 .jqcloud-word.w8 {
     color: var(--gray-color-800);
-    font-size: 450%;
+    font-size: 275%;
 }
 .jqcloud-word.w9 {
     color: var(--gray-color-900);
-    font-size: 500%;
+    font-size: 300%;
 }
 .jqcloud-word.w10 {
     color: #ffffff;
-    font-size: 550%;
+    font-size: 325%;
 }
 .jqcloud-word a {
     color: inherit;
     font-size: inherit;
     text-decoration: none;
-
     background: linear-gradient(black 0 0) no-repeat calc(200% - var(--_i, 0) * 100%) 100% / 200% calc(100% * var(--_i, 0) + .08em);
     transition: .3s calc(var(--_i, 0) * .3s), background-position .3s calc(.3s - calc(var(--_i, 0) * .3s));
 
