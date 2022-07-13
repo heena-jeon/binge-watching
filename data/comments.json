@@ -1,0 +1,9 @@
+[
+    {"text": "Test1", "weight": 130},
+    {"text": "Test2", "weight": 100},
+    {"text": "Test3", "weight": 500},
+    {"text": "Test4", "weight": 50},
+    {"text": "Test5", "weight": 50},
+    {"text": "Test6", "weight": 30.3},
+    {"text": "Test7", "weight": 140}
+]

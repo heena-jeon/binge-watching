@@ -1,0 +1,216 @@
+/********** 초기화 *********/
+:root {
+    --main-color-01: #3d3d3b;
+    --main-color-02: #4c5870;
+    --main-color-03: #ebedec;
+    --main-color-04: #a2a9af;
+
+    --gray-color-100: #fafafa;
+    --gray-color-200: #f2f2f2;
+    --gray-color-300: #e6e6e6;
+    --gray-color-400: #d9d9d9;
+    --gray-color-500: #cccccc;
+    --gray-color-600: #bfbfbf;
+    --gray-color-700: #b3b3b3;
+    --gray-color-800: #a6a6a6;
+    --gray-color-900: #999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    /* 중앙 정렬 */
+    width: 1240px;
+    margin: 0 auto;    
+    background-color: black;
+    color: var(--main-color-03);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color-04);
+}
+
+img {
+    border: 0;
+}
+
+button {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/********** 헤더 *********/
+
+#header_main {
+    /* 절대 좌표 */
+    height: 160px;
+    position: relative;
+}
+
+#header_main > #header_nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#header_main > #header_nav > ul { overflow: hidden; }
+#header_main > #header_nav > ul > li { float : left; }
+#header_main > #header_nav > ul > li > a {
+    display: block;
+    padding: 2px 10px;
+    border: 1px solid black;
+}
+
+#header_main > #header_nav > ul > li > a:hover {
+    background-color: black;
+    color: white;
+}
+
+#header_main > #header_gnb > #title {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+}
+
+#header_main > #header_gnb > #menu {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+}
+
+#header_main > #header_gnb > #menu > ul { overflow: hidden; }
+#header_main > #header_gnb > #menu > ul > li { float : left; }
+#header_main > #header_gnb > #menu > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+
+#header_main > #header_gnb > #menu > ul > li > a:hover {
+    background-color: black;
+    color: white;
+}
+
+#header_main > #header_gnb > #search_menu {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 200px;
+    height: 46px;
+    border: 1px solid black;
+}
+
+/********** 본문 *********/
+
+.swiper-container {
+    width: 1240px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-container .swiper-wrapper {    
+    width: 1240px;
+    height: 470px;
+    display: flex;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+    width: 240px;
+    height: 360px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .thumbnail {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+/********** 푸터 *********/
+
+#footer_main {
+    height: 350px;
+}
+
+/********** 모달 *********/
+
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+}
+
+.modal-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 900px;
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.25) 50%,
+        rgba(20, 20, 20, 1) 100%
+    ), url(images/entertainments/2days_1night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(20, 20, 20, 0.5);
+    color: white;
+}
+
+.modal-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    padding: 20px 20px;
+    display: table;
+}
+
+.modal-title {
+    display: table-row;
+    height: 60px;
+}
+
+.modal-content {
+    display: table-row;
+    height: 100%;
+}
+
+.w10 {
+    color: white;
+}
