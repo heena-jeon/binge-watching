@@ -1,0 +1,80 @@
+.slide {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slide-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    /* flex item의 flex-shrink는 기본값이 1 이므로 컨테이너 크기에 맞게 줄어드는데, 슬라이드를 구현할 것이므로 줄어들지 않도록 0을 준다 */
+    flex-shrink: 0;
+    transition: left 0.15s;
+}
+
+.slide-item:nth-child(1) {
+    background-color: aliceblue;
+}
+
+.slide-item:nth-child(2) {
+    background-color: antiquewhite;
+}
+
+.slide-item:nth-child(3) {
+    background-color: aqua;
+}
+
+.slide-item:nth-child(4) {
+    background-color: aquamarine;
+}
+
+.slide-item:nth-child(5) {
+    background-color: beige;
+}
+
+.slide-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #cccc;
+    cursor: pointer;
+}
+
+.slide-prev-button {
+    left: 10px;
+}
+
+.slide-next-button {
+    right: 10px;
+}
+
+.slide-pagination {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-pagination > li {
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.slide-pagination > li.active {
+    color: blue;
+}

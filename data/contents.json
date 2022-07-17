@@ -26,30 +26,30 @@
             "type" : "default"
         }
     ],
-    "entertainerment" : [
+    "entertainment" : [
         {
             "title" : "어서와 한국은 처음이지",
-            "link" : "../images/entertainerment/welcome_to_korea.jpg",
+            "link" : "../images/entertainment/welcome_to_korea.jpg",
             "type" : "happy"
         },
         {
             "title" : "런닝맨",
-            "link" : "../images/entertainerment/running_man.jpg",
+            "link" : "../images/entertainment/running_man.jpg",
             "type" : "happy"
         },
         {
             "title" : "미운 우리 새끼",
-            "link" : "../images/entertainerment/my_little_old_boy.jpg",
+            "link" : "../images/entertainment/my_little_old_boy.jpg",
             "type" : "happy"
         },
         {
             "title" : "놀면뭐하니?",
-            "link" : "../images/entertainerment/hangout_with_you.jpg",
+            "link" : "../images/entertainment/hangout_with_yoo.jpg",
             "type" : "happy"
         },
         {
             "title" : "1박2일",
-            "link" : "../images/entertainerment/2days_1ngiht.jpg",
+            "link" : "../images/entertainment/2days_1night.jpg",
             "type" : "happy"
         }
     ],

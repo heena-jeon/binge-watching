@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Binge Watching</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://golangkorea.github.io/js/jqcloud/jqcloud.min.js"></script>
+        <link rel="stylesheet" href="css/jqcloud.css">
+        <script src="js/common.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body onload="onBodyLoad()">
+        <header id="header_main">
+            <div id="header_nav">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+            <div id="header_gnb">
+                <div id="title">
+                    <h1>Binge Watching</h1>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">카테고리</a></li>
+                        <li><a href="#">MY</a></li>
+                    </ul>
+                </nav>
+                <div id="search_menu">
+                    <button>돋보기</button>
+                </div>
+            </div>
+        </header>
+        <main id="contents">
+            <div class="swiper-container">
+                <div class="swiper-title">
+                    <h1>예능</h1>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button type="button" onclick="showModal()">
+                            <img class="thumbnail" src="images/entertainments/2days_1night.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/entertainments/hangout_with_yoo.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/entertainments/my_little_old_boy.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/entertainments/running_man.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/entertainments/welcome_to_korea.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-title">
+                    <h1>영화</h1>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button type="button" onclick="showModal()">
+                            <img class="thumbnail" src="images/movie/about_time.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/movie/sinkhole.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/movie/the_medium.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/movie/the_witch.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/movie/topgun.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-title">
+                    <h1>드라마</h1>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/drama/doctor_prisoner.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/drama/good_doctor.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/drama/minamdang.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/drama/our_beloved_summer.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <button type="button">
+                            <img class="thumbnail" src="images/drama/through_the_darkness.jpg">
+                        </button>
+                        <h2>sub-title</h2>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </main>
+        <footer id="footer_main"></footer>
+        <div id="modal" class="modal-bg">
+            <div id="modal_wrap" class="modal-wrap">
+                <button type="button" class="modal-close" onclick="hideModal()">X</button>
+                <div class="modal-container">
+                    <div class="modal-title">
+                        <h2>1박2일</h2>
+                        <span>어쩌고 저쩌고</span>
+                    </div>
+                    <div id="comments" class="modal-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

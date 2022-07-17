@@ -1,0 +1,5 @@
+[
+    {"codeName" : "영화", "code" : "movie"},
+    {"codeName" : "드라마", "code" : "drama"},
+    {"codeName" : "예능", "code" : "entertainment"}
+]
