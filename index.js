@@ -22,17 +22,17 @@ import * as Util from "/core/util.js";
 
     const btnHome = document.getElementById("btnHome");
     btnHome.addEventListener("click", e => {
-        alert("!!!");
+        Util.Core.load("home", "app/com/home.js");
     });
 
     const btnCategory = document.getElementById("btnCategory");
     btnCategory.addEventListener("mouseover", e => {
-        alert("##");
+        
     });
 
     const btnMy = document.getElementById("btnMy");
     btnMy.addEventListener("click", e => {
-
+        Util.Core.load("my", "app/com/my.js");
     });
 
     const btnMainSearch = document.getElementById("btnMainSearch");

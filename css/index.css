@@ -195,25 +195,6 @@ button {
     display: none;
 }
 
-.modal-test {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 900px;
-    border-radius: 20px;
-    z-index: 1000;
-    display: none;
-    background: linear-gradient(
-        to bottom,
-        rgba(20, 20, 20, 0.25) 50%,
-        rgba(20, 20, 20, 1) 100%
-    ), url(../images/entertainments/2days_1night.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .modal-close {
     position: absolute;
     right: 15px;
@@ -226,23 +207,10 @@ button {
     cursor: pointer;
 }
 
-.modal-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 50%;
-    padding: 20px 20px;
-    display: table;
-}
-
-.modal-title {
-    display: table-row;
-    height: 60px;
-}
-
 .modal-content {
-    display: table-row;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 530px;
 }
-
-/********** 로그인 *********/

@@ -28,13 +28,11 @@ export class Slide {
         SlideView.render(slide, title);
         SlideView.render(slide, itemWrap);
 
-        const items = [];
         this.contents.forEach(content => {
-            items.push(SlideView.createItem(content.title, content.link, content.type));
+            let item = SlideView.createItem(content.title, content.link, content.type);
+            itemWrap.appendChild(item);
         });
 
-        itemWrap.innerHTML = items.join("");
-        
         this.slide = slide;
     }
 
@@ -86,11 +84,33 @@ const SlideView = {
     },
 
     createItem : function (title, link, type) {
-        return `<div class="slide-item">
-                    <button type="button" onclick="showModal()">
-                        <img class="thumnail" src="${link}">
-                    </button>
-                    <h2>${title}</h2>
-                </div>`;
+        const slideItem = document.createElement("div");
+        slideItem.setAttribute("class", "slide-item")
+
+        const item = document.createElement("button");
+        item.setAttribute("type", "button");
+        item.addEventListener("click", e => {
+            if(!Util.Modal.find("content")) {
+                const modal = Util.Modal.create("content", 700, 600);
+                Util.Modal.register("content", modal);
+                Util.Modal.load("app/modal/content.js");
+                Util.Modal.show("content");
+            }
+            Util.Modal.show("content");
+        });
+
+        const itemImage = document.createElement("img");
+        itemImage.setAttribute("class", "thumnail");
+        itemImage.setAttribute("src", link);
+        
+        item.appendChild(itemImage);
+
+        const itemTitle = document.createElement("h2");
+        itemTitle.innerText = title;
+
+        slideItem.appendChild(item);
+        slideItem.appendChild(itemTitle);
+
+        return slideItem;
     }
 }

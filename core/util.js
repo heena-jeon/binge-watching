@@ -3,9 +3,10 @@
  *****************************************/
 const apps = [];
 export const App = {
-    register : function(id, app) {
+    register : function(id, appId, app) {
         apps.push({
             "id" : id,
+            "appId" : appId,
             "app" : app
         });
     },
@@ -21,9 +22,13 @@ export const App = {
 const modals = [];
 export const Modal = {
     create : function(id, width, height) {
+        const modalWrap = document.createElement("div");
+        modalWrap.classList.add("modal-background");
+        modalWrap.classList.add(id);
+        
         const modal = document.createElement("div");
         modal.setAttribute("id", id);
-        modal.setAttribute("class", "modal")
+        modal.setAttribute("class", "modal");
         
         modal.style.width = width + "px";
         modal.style.height = height + "px";
@@ -34,6 +39,7 @@ export const Modal = {
         btnClose.addEventListener("click", e => {
             this.hide(id);
         });
+        modalWrap.appendChild(modal);
         modal.appendChild(btnClose);
 
         return modal;
@@ -41,7 +47,8 @@ export const Modal = {
 
     register : function(id, modal) {
         const container = document.getElementById("modalContainer");
-        container.appendChild(modal);
+        const modalWrap = modal.parentNode;
+        container.appendChild(modalWrap);
 
         modals.push({
             "id": id,
@@ -57,19 +64,23 @@ export const Modal = {
     },
 
     show : function(id) {
-        const container = document.getElementById("modalContainer");
         const modal = Common.findElement(modals, "id", id);
+        const container = modal.app.parentNode;
         
         container.style.display = "block";
         modal.app.style.display = "block";
     },
     
     hide : function(id) {
-        const container = document.getElementById("modalContainer");
         const modal = Common.findElement(modals, "id", id);
+        const container = modal.app.parentNode;
 
         container.style.display = "none";
-        modal.style.display = "none";
+        modal.app.style.display = "none";
+    },
+
+    find : function(id) {
+        return Common.findElement(modals, id);
     }
 }
 
@@ -79,22 +90,27 @@ export const Modal = {
 
 export const Core = {
     load : function(id, appId) {
-        const script = document.createElement("script");
-        script.setAttribute("type", "module");
-        script.setAttribute("src", appId);
-        document.querySelector("head").appendChild(script);
-
-        const app = document.createElement("div");
-        app.setAttribute("id", id);
-
-        App.register(app);
-
         const main = document.getElementById("main");
+        const mainApp = main.children[0];
+
+        let app = App.getApp(id) ? App.getApp(id).app : null;
+        
+        if(!app) {
+            const script = document.createElement("script");
+            script.setAttribute("type", "module");
+            script.setAttribute("src", appId);
+            document.querySelector("head").appendChild(script);
+
+            app = document.createElement("div");
+            app.setAttribute("id", id);
+
+            App.register(id, appId, app);
+        }
         
         if(main.children.length == 0) {
             main.appendChild(app);
         } else {
-            main.replaceChild(app, main.children[0]);
+            main.replaceChild(app, mainApp);
         }
     },
 

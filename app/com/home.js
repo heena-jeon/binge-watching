@@ -16,6 +16,7 @@ import {Slide} from "../cmn/slide.js";
 
     app.appendChild(mainSlide);
 
+    /* search data */
     const categorys = await Util.Core.sendHttpRequest("data/categorys.json");
     const contents = await Util.Core.sendHttpRequest("data/contents.json");
 
@@ -27,9 +28,7 @@ import {Slide} from "../cmn/slide.js";
         
         const slide = new Slide(categoryCode, categoryName, content);
         slide.createSlide();
-        slide.render("home");
-        
-        
+        slide.render("home"); 
     });
 
 })();
